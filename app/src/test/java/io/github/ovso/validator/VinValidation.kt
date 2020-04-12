@@ -13,6 +13,6 @@ class VinValidation {
 
     @Test
     fun `차량 차대 번 유효성 검사`() {
-        println("41주8595".isVPN())
+        println("41주8595".isVehicleNumber())
     }
 }

@@ -7,7 +7,7 @@ fun String.isEmail(): Boolean {
     return Pattern.compile(emailRegex, Pattern.CASE_INSENSITIVE).matcher(this).matches()
 }
 
-fun String.isVPN(): Boolean {
+fun String.isVehicleNumber(): Boolean {
     var returnValue = false
     try {
         var regex =
