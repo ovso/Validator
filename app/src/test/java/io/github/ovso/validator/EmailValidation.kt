@@ -45,10 +45,12 @@ class EmailValidation {
     @Test
     fun `이메일 주소 유효성 검사`() {
         validEmailIds.forEach {
+            println("이메일 = $it")
             assertEquals(it.isEmail(), true)
         }
 
         invalidEmailIds.forEach {
+            println("잘못된 이메일 = $it")
             assertEquals(it.isEmail(), false)
         }
 
