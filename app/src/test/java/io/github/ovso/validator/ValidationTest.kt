@@ -1,6 +1,5 @@
 package io.github.ovso.validator
 
-import junit.framework.Assert.assertTrue
 import org.junit.Test
 
 /**
@@ -8,11 +7,12 @@ import org.junit.Test
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
+@Suppress("NonAsciiCharacters")
 class ValidationTest {
 
 
     @Test
     fun `차량 차대 번 유효성 검사`() {
-        assertTrue("20너0821".isVehicleNumber())
+        assert("20너0821".isVehicleNumber())
     }
 }
