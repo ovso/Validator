@@ -11,7 +11,6 @@ import org.junit.Test
 class ValidationTest {
 
 
-
     @Test
     fun `차량 차대 번 유효성 검사`() {
         assertTrue("20너0821".isVehicleNumber())
