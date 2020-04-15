@@ -15,7 +15,7 @@ import org.junit.Assert.*
  */
 @Suppress("NonAsciiCharacters")
 @RunWith(AndroidJUnit4::class)
-class ExampleInstrumentedTest {
+class VehicleNumberTest {
     @Test
     fun `carValidatorTest`() {
         // Context of the app under test.

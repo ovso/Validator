@@ -4,8 +4,9 @@ import android.content.Context
 import java.util.regex.Pattern
 
 fun String.isEmail(context:Context): Boolean {
-    val emailRegex = context.getString(R.string.email_regex)
-    return Pattern.compile(emailRegex, Pattern.CASE_INSENSITIVE).matcher(this).matches()
+//    val emailRegex = context.getString(R.string.email_regex)
+    val emailRegex = "^[\\w-+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})\$"
+    return Pattern.compile(emailRegex).matcher(this).matches()
 }
 
 fun String.isVehicleNumber(context: Context): Boolean {
