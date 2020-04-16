@@ -1,19 +1,17 @@
+@file:Suppress("NonAsciiCharacters")
+
 package io.github.ovso.validator2
 
-import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.test.platform.app.InstrumentationRegistry
-import org.junit.Assert.assertEquals
 import org.junit.Test
-import org.junit.runner.RunWith
+
+import org.junit.Assert.*
 
 /**
  * Example local unit test, which will execute on the development machine (host).
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-@RunWith(AndroidJUnit4::class)
-class EmailValidationTest {
-
+class EmailValidator {
     // list of valid email addresses
     private val validEmailIds = arrayOf(
         "ovsoce@yahoo.com",
@@ -47,9 +45,7 @@ class EmailValidationTest {
 
 
     @Test
-    fun emailValidation() {
-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("io.github.ovso.validator2.test", appContext.packageName)
+    fun `이메일 주소 유효성 검사`() {
         validEmailIds.forEach {
             assertEquals(it.isEmail(), true)
         }
@@ -57,6 +53,5 @@ class EmailValidationTest {
         invalidEmailIds.forEach {
             assertEquals(it.isEmail(), false)
         }
-
     }
 }
