@@ -50,15 +50,16 @@ class EmailValidationTest {
     fun emailValidation() {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("io.github.ovso.validator2.test", appContext.packageName)
-
+        val regex = "^[\\\\w-+]+(\\\\.[\\\\w]+)*@[\\\\w-]+(\\\\.[\\\\w]+)*(\\\\.[a-z]{2,})\$"
+        val emailRegex = "^[\\w-+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$"
         validEmailIds.forEach {
             println("이메일 = $it")
-            assertEquals(it.isEmail(appContext), true)
+            assertEquals(it.isEmail(emailRegex), true)
         }
 
         invalidEmailIds.forEach {
             println("잘못된 이메일 = $it")
-            assertEquals(it.isEmail(appContext), false)
+            assertEquals(it.isEmail(emailRegex), false)
         }
 
     }

@@ -3,10 +3,11 @@ package io.github.ovso.validator2
 import android.content.Context
 import java.util.regex.Pattern
 
-fun String.isEmail(context:Context): Boolean {
-//    val emailRegex = context.getString(R.string.email_regex)
-    val emailRegex = "^[\\w-+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})\$"
-    return Pattern.compile(emailRegex).matcher(this).matches()
+fun String.isEmail(regex: String): Boolean {
+//    val emailRegex = "^[\\w-+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$"
+
+//    return this.matches(Regex(regex))
+    return Pattern.compile(regex, Pattern.CASE_INSENSITIVE).matcher(this).matches()
 }
 
 fun String.isVehicleNumber(context: Context): Boolean {
