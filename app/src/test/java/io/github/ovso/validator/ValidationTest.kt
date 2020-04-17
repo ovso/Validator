@@ -27,6 +27,13 @@ class ValidationTest {
         Assert.assertSame("38육4104".isVehicleNumber(), true)
         Assert.assertSame("38해4104".isVehicleNumber(), true)
         Assert.assertSame("38공4104".isVehicleNumber(), true)
+    }
 
+    @Test
+    fun `비밀번호 유효성 검사`() {
+        Assert.assertSame("qwer1234".isPassword(), false)
+        Assert.assertSame("Qwer1234".isPassword(), false)
+        Assert.assertSame("qwer!234".isPassword(), false)
+        Assert.assertSame("Qwer!234".isPassword(), true)
     }
 }
