@@ -1,4 +1,3 @@
 rootProject.name='ValidatorSample'
 include ':app'
-include ':validator'
 include ':validator2'

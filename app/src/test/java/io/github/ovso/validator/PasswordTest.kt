@@ -8,13 +8,15 @@ class PasswordTest {
     @Test
     fun solution() {
         val arrPw =
-            arrayOf("qwer1234", "Qwer1234", "qwer!234", "Qwer!234123908712397612")
+            arrayOf("qwer1234", "Qwer1234", "qwer!234", "Qwer!2")
 
         // 비밀번호 유효성 검사식1 : 숫자, 특수문자가 포함되어야 한다.
-        val regExp_symbol = "([0-9].*[!,@,#,^,&,*,(,)])|([!,@,#,^,&,*,(,)].*[0-9])"
+        val regExp_symbol = "([0-9].*[!,@,#,^,&,*,(,)])|([!,@,#,^,&,*,(,)].*[0-9]).{3,6}$"
         // 비밀번호 유효성 검사식2 : 영문자 대소문자가 적어도 하나씩은 포함되어야 한다.
         // 비밀번호 유효성 검사식2 : 영문자 대소문자가 적어도 하나씩은 포함되어야 한다.
         val regExp_alpha = "([a-z].*[A-Z])|([A-Z].*[a-z])"
+
+        val regExpLength = "/^"
 
         // 정규표현식 컴파일
 
@@ -46,6 +48,8 @@ class PasswordTest {
             "(?=([a-zA-Z].*[0-9].*[^0-9a-zA-Z].*)|([a-zA-Z].*[^0-9a-zA-Z].*[0-9].*)|([0-9].*[a-zA-Z].*[^0-9a-zA-Z].*)|([0-9].*[^0-9a-zA-Z].*[a-zA-Z].*)|([^0-9a-zA-Z].*[a-zA-Z].*[0-9].*)|([^0-9a-zA-Z].*[0-9].*[a-zA-Z].*)$).{9,16}"
         val compile =
             Pattern.compile(regex)
-        assert(compile.matcher("kfkdgo2@").matches())
+        assert(compile.matcher("9kfkdgo2@").matches())
+        val compile2 = Pattern.compile("([a-z].*[A-Z])|([A-Z].*[a-z])")
+        assert(compile2.matcher("Akfkdgo2@").find())
     }
 }

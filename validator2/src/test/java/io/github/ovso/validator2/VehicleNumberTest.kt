@@ -9,7 +9,7 @@ class VehicleNumberValidator {
 
     @Test
     fun `자동차 번호 유효성 검사`() {
-        Assert.assertSame("41주8595".isVehicleNumber(), true)
+        Assert.assertSame("41주0987".isVehicleNumber(), true)
         Assert.assertSame("부산27무6662".isVehicleNumber(), true)
         Assert.assertSame("서울1나6881".isVehicleNumber(), true)
         Assert.assertSame("02허9757".isVehicleNumber(), true)

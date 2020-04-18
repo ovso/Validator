@@ -11,7 +11,7 @@ import org.junit.Assert.*
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class EmailValidator {
+class EmailTest {
     // list of valid email addresses
     private val validEmailIds = arrayOf(
         "ovsoce@yahoo.com",
