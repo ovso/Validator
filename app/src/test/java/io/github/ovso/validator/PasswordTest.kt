@@ -8,9 +8,7 @@ class PasswordTest {
     @Test
     fun solution() {
         val arrPw =
-            arrayOf("qwer1234", "Qwer1234", "qwer!234", "Qwer!234")
-
-        // 비밀번호 유효성 검사식1 : 숫자, 특수문자가 포함되어야 한다.
+            arrayOf("qwer1234", "Qwer1234", "qwer!234", "Qwer!234123908712397612")
 
         // 비밀번호 유효성 검사식1 : 숫자, 특수문자가 포함되어야 한다.
         val regExp_symbol = "([0-9].*[!,@,#,^,&,*,(,)])|([!,@,#,^,&,*,(,)].*[0-9])"
