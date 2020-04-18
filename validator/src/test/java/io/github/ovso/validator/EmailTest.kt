@@ -1,6 +1,6 @@
 @file:Suppress("NonAsciiCharacters")
 
-package io.github.ovso.validator2
+package io.github.ovso.validator
 
 import org.junit.Test
 

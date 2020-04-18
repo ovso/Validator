@@ -1,4 +1,4 @@
-package io.github.ovso.validator2
+package io.github.ovso.validator
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry

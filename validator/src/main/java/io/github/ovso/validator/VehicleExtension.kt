@@ -1,4 +1,4 @@
-package io.github.ovso.validator2
+package io.github.ovso.validator
 
 import java.util.regex.Pattern
 
