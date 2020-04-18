@@ -48,6 +48,6 @@ class PasswordTest {
             "(?=([a-zA-Z].*[0-9].*[^0-9a-zA-Z].*)|([a-zA-Z].*[^0-9a-zA-Z].*[0-9].*)|([0-9].*[a-zA-Z].*[^0-9a-zA-Z].*)|([0-9].*[^0-9a-zA-Z].*[a-zA-Z].*)|([^0-9a-zA-Z].*[a-zA-Z].*[0-9].*)|([^0-9a-zA-Z].*[0-9].*[a-zA-Z].*)$).{9,16}"
         val compile =
             Pattern.compile(regex)
-        println("Qwer!2".matches(Regex(regex)))
+        assert(compile.matcher("kfkdgo2@").matches())
     }
 }
