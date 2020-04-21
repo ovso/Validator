@@ -1,5 +1,6 @@
 package io.github.ovso.validator
 
+// 외국인까지 포함해야 한다. 하지만 6으로 시작하는 번호는 유효성 체크에 실패하고 있다
 fun String.isRRN(): Boolean {
     var inputRrn = this
     inputRrn = inputRrn.replace(" ", "")
